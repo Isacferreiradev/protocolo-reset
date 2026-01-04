@@ -857,25 +857,56 @@ b {
     }
 
     h1 {
-        font-size: 1.4rem;
-        /* Ensure it fits in 2 lines without wrapping */
-        line-height: 1.2;
-        margin-bottom: 10px;
+        font-size: 1.55rem;
+        /* Slightly larger as requested */
+        line-height: 1.15;
+        margin-bottom: 12px;
     }
 
     .hero-sub {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         margin: 10px auto 20px;
         line-height: 1.4;
-        max-width: 90%;
+        max-width: 95%;
+        /* Widen it to avoid weird breaks */
+    }
+
+    .hero-sub br {
+        display: none;
+        /* Hide manual breaks on mobile */
     }
 
     /* 3. VSL CONTAINER & OVERLAY */
     .vsl-container {
         max-width: 85%;
         /* Make VSL smaller on mobile */
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
         /* Center it */
+    }
+
+    .vsl-caption {
+        font-size: 0.75rem;
+        /* Smaller caption */
+        margin-top: 8px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+        /* Slightly smaller padding */
+        font-size: 0.9rem;
+        /* Slightly smaller text */
+        max-width: 320px;
+        /* Prevent full edge-to-edge on larger mobiles */
+        margin: 0 auto;
+        /* Center it */
+    }
+
+    /* Text below button */
+    .hero-section p:last-child {
+        font-size: 0.7rem !important;
+        /* Smaller disclaimer text */
+        margin-top: 10px !important;
     }
 
     .vsl-overlay-content {

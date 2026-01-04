@@ -857,10 +857,12 @@ b {
     }
 
     h1 {
-        font-size: 1.55rem;
-        /* Slightly larger as requested */
+        font-size: 1.35rem;
+        /* Reduced to ensure 2 lines */
         line-height: 1.15;
         margin-bottom: 12px;
+        letter-spacing: -0.03em;
+        /* Tighten slightly */
     }
 
     .hero-sub {

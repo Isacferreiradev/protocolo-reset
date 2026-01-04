@@ -844,26 +844,37 @@ b {
     /* 2. HERO SECTION */
     .hero-section {
         min-height: auto;
-        padding-top: 40px;
-        padding-bottom: 60px;
+        padding-top: 20px;
+        /* Reduced from 40px */
+        padding-bottom: 30px;
+        /* Reduced from 60px */
     }
 
     .hero-pill {
-        font-size: 0.75rem;
-        padding: 6px 12px;
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        /* Smaller to fit in fewer lines */
+        line-height: 1.1;
+        margin-bottom: 10px;
     }
 
     .hero-sub {
-        font-size: 1rem;
-        margin: 20px auto 30px;
-        line-height: 1.6;
+        font-size: 0.9rem;
+        /* Smaller sub-headline */
+        margin: 10px auto 20px;
+        line-height: 1.4;
+        max-width: 90%;
     }
 
     /* 3. VSL CONTAINER & OVERLAY */
     .vsl-container {
         max-width: 100%;
-        /* Use full width */
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .vsl-overlay-content {

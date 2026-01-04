@@ -815,3 +815,140 @@ b {
     color: var(--color-text-muted);
     line-height: 1.4;
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (MAX-WIDTH: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. GLOBAL SPACING & TYPOGRAPHY */
+    :root {
+        --spacing-section: 60px;
+        /* Tighter sections */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        /* Fail-safe if clamp is too big */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* 2. HERO SECTION */
+    .hero-section {
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .hero-pill {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        margin: 20px auto 30px;
+        line-height: 1.6;
+    }
+
+    /* 3. VSL CONTAINER & OVERLAY */
+    .vsl-container {
+        max-width: 100%;
+        /* Use full width */
+        margin-bottom: 40px;
+    }
+
+    .vsl-overlay-content {
+        padding: 15px 20px;
+        min-width: 200px;
+        /* Allow smaller overlay on tiny screens */
+    }
+
+    .vsl-overlay-top {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .vsl-overlay-bottom {
+        font-size: 0.8rem;
+    }
+
+    .vsl-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* 4. GRIDS (STACKING) */
+    .stats-grid,
+    .science-grid,
+    .testimonial-grid,
+    .bonus-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        /* Force single column */
+        gap: 30px;
+    }
+
+    /* 5. CARDS & MODULES */
+    .stat-card,
+    .science-item,
+    .module-item,
+    .testimonial-card,
+    .bonus-card,
+    .pricing-card {
+        padding: 25px;
+        /* Reduce padding inside cards */
+    }
+
+    .module-item {
+        flex-direction: column;
+        /* Stack number and content */
+        text-align: center;
+        align-items: center;
+    }
+
+    .module-number {
+        margin-bottom: 10px;
+    }
+
+    /* 6. PRICING & BUTTONS */
+    .pricing-card.premium {
+        transform: none;
+        /* Disable scaling */
+        border-width: 2px;
+        padding: 40px 25px;
+    }
+
+    .popular-tag {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+        width: 90%;
+        /* Prevent overflow */
+    }
+
+    .btn {
+        width: 100%;
+        /* Full width buttons */
+        padding: 16px 20px;
+        display: block;
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    /* 7. FOOTER */
+    footer {
+        padding: 40px 0;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}

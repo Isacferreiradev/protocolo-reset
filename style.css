@@ -816,6 +816,35 @@ b {
     line-height: 1.4;
 }
 
+/* --- NEW UTILITY CLASSES --- */
+.hero-disclaimer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.segment-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--color-surface);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.footer {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid var(--color-border);
+    color: #666;
+    font-size: 0.9rem;
+}
+
 /* =========================================
    MOBILE RESPONSIVENESS (MAX-WIDTH: 768px)
    ========================================= */
@@ -834,7 +863,19 @@ b {
 
     h2 {
         font-size: 1.75rem;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        /* Reduced from 40px */
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        /* Slightly smaller */
+    }
+
+    p {
+        font-size: 1rem;
+        /* readable base size */
     }
 
     .container {
@@ -857,20 +898,18 @@ b {
     }
 
     h1 {
-        font-size: 1.35rem;
-        /* Reduced to ensure 2 lines */
+        font-size: 1.6rem;
+        /* Slightly larger than 1.35 for impact */
         line-height: 1.15;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
         letter-spacing: -0.03em;
-        /* Tighten slightly */
     }
 
     .hero-sub {
-        font-size: 0.9rem;
-        margin: 10px auto 20px;
-        line-height: 1.4;
-        max-width: 95%;
-        /* Widen it to avoid weird breaks */
+        font-size: 0.95rem;
+        margin: 10px auto 25px;
+        line-height: 1.5;
+        max-width: 100%;
     }
 
     .hero-sub br {
@@ -878,43 +917,26 @@ b {
         /* Hide manual breaks on mobile */
     }
 
+    .hero-disclaimer {
+        font-size: 0.75rem !important;
+        margin-top: 15px !important;
+    }
+
     /* 3. VSL CONTAINER & OVERLAY */
     .vsl-container {
-        max-width: 85%;
-        /* Make VSL smaller on mobile */
-        margin: 0 auto 20px;
-        /* Center it */
+        max-width: 100%;
+        /* Full width on mobile containers */
+        margin: 0 auto 30px;
     }
 
     .vsl-caption {
-        font-size: 0.75rem;
-        /* Smaller caption */
-        margin-top: 8px;
-    }
-
-    .btn {
-        width: 100%;
-        padding: 14px 20px;
-        /* Slightly smaller padding */
-        font-size: 0.9rem;
-        /* Slightly smaller text */
-        max-width: 320px;
-        /* Prevent full edge-to-edge on larger mobiles */
-        margin: 0 auto;
-        /* Center it */
-    }
-
-    /* Text below button */
-    .hero-section p:last-child {
-        font-size: 0.7rem !important;
-        /* Smaller disclaimer text */
-        margin-top: 10px !important;
+        font-size: 0.8rem;
+        margin-top: 10px;
     }
 
     .vsl-overlay-content {
-        padding: 15px 20px;
+        padding: 15px 25px;
         min-width: 200px;
-        /* Allow smaller overlay on tiny screens */
     }
 
     .vsl-overlay-top {
@@ -939,61 +961,115 @@ b {
     .pricing-grid {
         grid-template-columns: 1fr;
         /* Force single column */
-        gap: 30px;
+        gap: 25px;
     }
 
-    /* 5. CARDS & MODULES */
+    /* 5. COMPONENTS & CARDS */
     .stat-card,
     .science-item,
     .module-item,
     .testimonial-card,
     .bonus-card,
-    .pricing-card {
-        padding: 25px;
-        /* Reduce padding inside cards */
+    .pricing-card,
+    .segment-card {
+        padding: 24px 20px;
+        /* Comfortable padding */
+    }
+
+    .section-intro {
+        margin-bottom: 30px;
+        font-size: 0.95rem;
     }
 
     .module-item {
         flex-direction: column;
-        /* Stack number and content */
         text-align: center;
         align-items: center;
+        gap: 15px;
     }
 
     .module-number {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* Checklist Mobile */
+    .checklist li {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .checklist li svg {
+        flex-shrink: 0;
+        /* Prevent icon shrinking */
+        margin-top: 3px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .checklist li span {
+        font-size: 0.95rem;
     }
 
     /* 6. PRICING & BUTTONS */
     .pricing-card.premium {
         transform: none;
         /* Disable scaling */
+        padding: 30px 20px;
         border-width: 2px;
-        padding: 40px 25px;
     }
 
     .popular-tag {
-        font-size: 0.8rem;
-        padding: 6px 15px;
-        width: 90%;
-        /* Prevent overflow */
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        width: auto;
+        /* Let it size naturally */
+        min-width: 180px;
     }
 
     .btn {
         width: 100%;
-        /* Full width buttons */
         padding: 16px 20px;
         display: block;
         text-align: center;
+        font-size: 1rem;
+        white-space: normal;
+        /* Allow text wrapping if needed */
+        line-height: 1.2;
+    }
+
+    /* FAQ */
+    .faq-details summary {
+        padding: 16px;
         font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .faq-details p {
+        padding: 0 16px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Guarantee Box */
+    .guarantee-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .guarantee-box h3 {
+        justify-content: center;
+        display: flex;
+        /* Helps align text if needed */
     }
 
     /* 7. FOOTER */
-    footer {
+    .footer {
         padding: 40px 0;
     }
 
-    footer p {
+    .footer p {
         font-size: 0.8rem;
+        margin-bottom: 10px;
     }
 }

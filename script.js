@@ -81,18 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTimer(); // Initial call
     }
 
-    // 5. VSL DELAY (4 Minutes)
-    const delayStyle = document.getElementById('vsl-delay-style');
-    if (delayStyle) {
-        // 4 minutes = 240000 milliseconds
-        // Use 240 seconds for production
-        setTimeout(() => {
-            delayStyle.remove();
 
-            // Re-trigger scroll animations check if needed
-            window.dispatchEvent(new Event('scroll'));
-        }, 240000);
-    }
 
     // 6. VIMEO PLAYER CONTROLLER
     const vslIframe = document.getElementById('vsl-player');
